@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+<!--Estoy usando 3 fuentes de google fonts-->
+    
+    <title>Blog Ramírez</title>
+    <meta name="description" content="Pagina web de blog de café ramirez">
+    <link rel="shortcut icon" href="Imagenes/cookie.png">
+
+    <!--prefetch  se usa para cargar las paginas que esperamos que el usuario visite
+    solo se puede aplicar a una y debe de ser la seccion mas popular de la pagina web-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!--Preload (se usa para los elementos que queramos que carguen primero)-->
+    <!--Aqui cargamos la hoja de estilos y el normalize usando el preload-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css"> <!--Acuerdate de; normalize-->
+
+    <!--Aqui aplicamos el preload las funetes de google-->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap" crossorigin="crossorigin" as="font">
+   
+    <!--ejemplo de prelad a una imagen-->
+    <link rel="preload" href="Imagenes/blog1.jpg" as="image">
+
+  
+</head>
+<body>
+   <header class="header">
+       <div class="contenedor">
+                <div class="barra">
+                    <a class="logo" href="index.html">
+                        <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                        <!--Se usa span para darle una variante al texto como 2 fuentes en un titulo -->
+                    </a>
+                    <nav class="navegacion">
+                        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                        <a class="navegacion__enlace" href="cursos.html">Cursos</a>
+                        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+
+                    </nav>
+                </div>
+       </div>
+       <div class="header__texto">
+           <h2 class="no-margin">Blog Ramirez con consejos y cursos</h2>
+           <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+       </div>
+   </header>
+   <!--Termina el header y empieza el main-->
+
+   <div class="contenedor contenido-principal">
+   <main class="blog">
+       <h3>Nuestro Blog</h3>
+       <!-----Entrada 1----->
+       <article class="entrada">
+           <div class="entrada__imagen">
+               <picture>
+                   <!--La etiqueta picture nos ayuda a implementar el formato webp
+                   el navegador primero intenta cargar la imagen con webp sino se va al jpg-->
+                   <source loading="lazy" srcset="Imagenes/blog1.webp" type="image/webp">
+
+                   <img loading="lazy" src="Imagenes/blog1.jpg" alt="Imagen blog ">
+                   <!--Se usa lazy para que las imagenes carguen solo cuando el usuario haga scroll-->
+               </picture>
+               
+           </div>
+           
+           <div class="entrada__contenido">
+               <h4 class="no-margin">Tipos de Granos de Café</h4>
+               <p> Vivamus rhoncus turpis leo, non rhoncus ex blandit at. Etiam consequat finibus arcu et scelerisque. Curabitur at tristique diam. Suspendisse et ex vehicula, venenatis odio ut, iaculis quam. Maecenas eget metus non eros commodo accumsan eu ac lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+
+               <a class="boton boton--primario" href="entrada.html">Leer Entrada</a>
+           </div>
+       </article>
+
+       <!-----Entrada 2----->
+       <article class="entrada">
+        <div class="entrada__imagen">
+            <picture>
+                <!--La etiqueta picture nos ayuda a implementar el formato webp
+                el navegador primero intenta cargar la imagen con webp sino se va al jpg-->
+                <source loading="lazy" srcset="Imagenes/blog2.webp" type="image/webp">
+
+                <img loading="lazy" src="Imagenes/blog2.jpg" alt="Imagen blog ">
+                <!--Se usa lazy para que las imagenes carguen solo cuando el usuario haga scroll-->
+            </picture>
+        </div>
+        
+        <div class="entrada__contenido">
+            <h4 class="no-margin">3 Deliciosas Recetas de Café </h4>
+            <p> Vivamus rhoncus turpis leo, non rhoncus ex blandit at. Etiam consequat finibus arcu et scelerisque. Curabitur at tristique diam. Suspendisse et ex vehicula, venenatis odio ut, iaculis quam. Maecenas eget metus non eros commodo accumsan eu ac lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+
+            <a class="boton boton--primario" href="entrada.html">Leer Entrada</a>
+        </div>
+    </article>
+
+    <!-----Entrada 3----->
+    <article class="entrada ">
+        <div class="entrada__imagen">
+            <picture>
+                <!--La etiqueta picture nos ayuda a implementar el formato webp
+                el navegador primero intenta cargar la imagen con webp sino se va al jpg-->
+                <source loading="lazy" srcset="Imagenes/blog3.webp" type="image/webp">
+
+                <img loading="lazy" src="Imagenes/blog3.jpg" alt="Imagen blog ">
+                <!--Se usa lazy para que las imagenes carguen solo cuando el usuario haga scroll-->
+            </picture>
+            
+        </div>
+        
+        <div class="entrada__contenido">
+            <h4 class="no-margin">Beneficios del Café</h4>
+            <p> Vivamus rhoncus turpis leo, non rhoncus ex blandit at. Etiam consequat finibus arcu et scelerisque. Curabitur at tristique diam. Suspendisse et ex vehicula, venenatis odio ut, iaculis quam. Maecenas eget metus non eros commodo accumsan eu ac lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+          
+
+            <a class="boton boton--primario" href="entrada.html">Leer Entrada</a>
+        </div>
+    </article>
+
+    
+
+   </main>
+
+   <aside class="sidebar">
+       <h3>Nuestros Cursos y Talleres</h3> 
+       <!--ul es lista no ordenada--> 
+       <!--li es elemento de una lista y agregan una viñeta-->
+       <!--ol es lista ordenada y agrega numeros-->
+       <ul class="cursos no-padding">
+           <!--Primer curso-->
+           <li class="widget-curso">
+               <h4 class="no-margin">Tecnicas de extraccion de café</h4>
+               <p class="widget-curso__label">Precio:
+               <span class="widget-curso__info">800 Varos</span></p>
+
+               <p class="widget-curso__label">Cupo:
+                <span class="widget-curso__info">10 Gentes</span></p>
+
+                <a class="boton boton--secundario  " href="cursos.html">Más información</a>
+            </li> 
+
+                <!--Segundo curso-->
+                <li class="widget-curso">
+                    <h4 class="no-margin">4 Recetas de Café para principiantes</h4>
+                    <p class="widget-curso__label">Precio:
+                    <span class="widget-curso__info">500 Varos</span></p>
+     
+                    <p class="widget-curso__label">Cupo:
+                     <span class="widget-curso__info">15 Gentes</span></p>
+     
+                     <a class="boton boton--secundario  " href="cursos.html">Más información</a>
+           </li> 
+       </ul>
+   </aside>
+   </div>
+   
+   <footer class="footer">
+    <div class="contenedor">
+        
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <!--Se usa span para darle una variante al texto como 2 fuentes en un titulo -->
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlace" href="cursos.html">Cursos</a>
+                    <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+
+                </nav>
+            </div>
+    </div>
+
+   </footer>
+
+   <!--Se refomienda colocar el codigo javascript en esta seccion-->
+   <script src="js/modernizr.js"></script>
+
+</body>
+</html>

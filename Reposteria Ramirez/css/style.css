@@ -1,0 +1,307 @@
+/*Declaramos las variables a utilizar (fuentes y colores)*/
+:root{
+    --fuenteHeadings: "PT+Sans", sans-serif;
+    --fuenteParrafos: "Open+Sans", sans-serif;
+
+    --primario: #784D3C;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #e1e1e1;
+}
+/*Para que el border, paggin o margin no afecten el ancho de los elementos*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*Se usa para que un rem siempre sea 10px*/
+}
+/*Hace que el sitio sea mas dinamico*/
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+/*Le decimos al body que use estos parametros*/
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2; /*se recomienda un gran interlineado para blogs*/
+}
+/*Asignamos los valores globales
+  Todo lo que se usa mas de una vez se asigna aquí*/
+.contenedor{
+    max-width: 120rem; /*Hace que solo tome este espacio cuando está disponible*/
+    width: 90%; /*Hace que los elementos no se vallan hasta las orillas */
+    /*width: min(90%, 120rem); es lo mismo que lo de arriba*/
+    margin:0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeadings);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+} 
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+    
+}
+h4{
+    font-size: 2.3rem;
+}
+img{
+    max-width: 100%;
+}
+
+/***Utilidades***/ 
+.no-margin{
+    margin: 0;
+}
+/*Elimina los margenes que pone el navegador a varios elementos por defecto*/
+
+.no-padding{
+    padding: 0 ;
+}
+/*Elimina el padding que pone el navegador a varios elementos por defecto*/
+
+.centrar-texto{
+    text-align: center;
+}
+/*Comienza el codigo chido*/
+
+/*header*/
+.webp .header{
+    /*Si el navegador acepta webp y ya lo declaramos con js entonces anexamos una imagen webp en css así*/
+    background-image: url(../Imagenes/banner.webp);
+}
+.no-webp .header{
+    background-image: url(../Imagenes/banner.jpg);
+}
+.header{
+ 
+    height: 60rem;
+    background-size: cover; /*Para que tome todo el espacio disponible*/
+    background-repeat: no-repeat; /*Se recomienda para las imagenes de fondo*/    background-position: center center;/*El primer center centra la imagen horizontalmente y el otro verticalmente (Con el background size cover suele usarse el center center)*/ 
+}
+.header__texto{
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 5rem;
+}   
+@media(min-width:768px){
+     .header__texto{
+         margin-top: 10rem;
+     }
+}
+/*Para acomodar elementos dentro de un contenedor es mejor usar  flexbox*/
+.barra{
+    padding: 1rem;
+}
+@media(min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:4rem;
+        
+        
+    }
+}
+.logo{
+    color: var(--blanco);
+}
+.logo__nombre{
+    font-weight: 400;
+}
+.logo__bold{
+    font-weight: 700;
+} 
+/*Navegacion*/
+
+@media(min-width:768px){
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block;/*Se usa el block para que los elementos esten apilados*/
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+/*Empieza el blog*/
+@media(min-width:768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+
+}
+.entrada{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;;
+    /*Primero se pasa el ancho, el tipo y el color*/
+}
+.entrada:last-of-type{ /*Se aplica al ultimo elemento de la clase entrada*/
+    border: none;
+    margin: 0; 
+}
+.boton{
+    display: block; /*Se usa block para que abarque todo el div*/
+    color: var(--blanco);
+    font-family: var(--fuenteHeadings);
+    text-align: center;
+    padding: 1rem 3rem; /*(1 rem arriba y abajo. 3 rem izq y der)*/
+    font-size: 1.8rem;
+    text-transform: uppercase; /*Para que todo el texto sea mayusculas*/
+    font-weight: 700; /*Lo convierte en negritas con grosor de 700*/
+    margin-bottom: 2rem;
+    border: none;
+}
+@media(min-width:768px){
+    .boton{
+    display: inline-block; 
+    /*El display inline es inmune al width y al margin. el inline-block no lo es y solo toma el espacio que requiere*/
+    }
+}
+.boton:hover{
+    cursor: pointer ;
+}
+.boton--primario{
+    background-color: var(--negro);
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+.cursos{
+    list-style: none; 
+}
+.widget-curso{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+
+}
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label{
+    font-family: var(--fuenteHeadings);
+    font-weight: bold; /*o 700*/
+}
+.widget-curso__info{
+    font-weight: normal; /*o 400*/
+}
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 2rem;
+}
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem 0;
+    margin-top: 4rem;
+}
+/*----------Nosotros----------*/
+.titulo{
+    text-align: center;
+}
+@media(min-width:768px){
+    .nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    /*Con flex:
+    .nosotros{
+        display: flex;
+        gap: 2rem;
+    }
+    .nosotros-imagen, 
+    .nosotros-contenido{
+        flex-basis: 50%;
+    }*/
+}
+/*Bloque de cursos*/
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+.curso:last-of-type{
+    border: none;
+}
+@media(min-width:768px){
+    .curso{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    }
+}
+/*codigo duplicado con fines educativos*/
+.curso__label{
+    font-family: var(--fuenteHeadings);
+    font-weight: bold; /*o 700*/
+}
+.curso__info{
+    font-weight: normal; /*o 400*/
+}
+.curso__label,
+.curso__info{
+    font-size: 2rem;
+}
+/*-----------Seccion de entrada-----------*/
+.entrada-titulo{
+    margin: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    
+}
+/*------Seccion de contacto-------*/
+.contacto-texto{
+    text-align: center;
+}
+.contacto-imagen{
+    background-image: url(../Imagenes/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.formulario{
+    background-color: var(--blanco);
+    margin:-5rem auto 0 auto;
+    width: 95%;
+    padding:5rem;
+
+}
+.campo{
+    display: flex; 
+    /*Con este flex le habilito la propiedades de flex a los campos hijos*/
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+.campo__label{
+    flex:0 0 9rem;
+    /*El factor de crecimiento será 0 y tampoco se hará mas pequeño
+    pero el width será de 9 rem*/
+    text-align: right;
+
+}
+.campo__field{
+    flex: 1;
+    /*Todo el espacio que quedé disponible será tomado por este campo*/
+    border: 1px solid var(--gris);
+
+}
+.campo__field--textarea{
+    height: 200px;
+    
+}
+
+
+
+
+

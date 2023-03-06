@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!--Acuerdate de; normalize-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<!--Estoy usando 3 fuentes de google fonts-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Blog Ramírez</title>
+    <link rel="shortcut icon" href="Imagenes/cookie.png">
+</head>
+<body>
+   <header class="header">
+       <div class="contenedor">
+                <div class="barra">
+                    <a class="logo" href="index.html">
+                        <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                        <!--Se usa span para darle una variante al texto como 2 fuentes en un titulo -->
+                    </a>
+                    <nav class="navegacion">
+                        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                        <a class="navegacion__enlace" href="cursos.html">Cursos</a>
+                        <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+
+                    </nav>
+                </div>
+       </div>
+       <div class="header__texto">
+           <h2 class="no-margin">Blog Ramírez con consejos y cursos</h2>
+           <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+       </div>
+   </header>
+   <!--Termina el header y empieza el main-->
+
+   
+   <main class="contenedor">
+     <div class="contacto">
+       <div class="contacto-texto"><h3>Contacto</h3></div>
+       <div class="contacto-imagen"></div>
+
+       <form class="formulario">
+
+         <div class="campo">
+           <label class="campo__label" for="nombre">Nombre</label>
+           <input class="campo__field" type="text" placeholder="Tu nombre" id="nombre">
+           <!--el id o identificador hace que solo puedas nombrar un elemento una vez
+          el for hace que al picarle a nombre se habilite el campo de texto
+        lo cual es buena practica para la accesibilidad web. El for siempre lleva id-->
+         </div>
+         <div class="campo">
+          <label class="campo__label" for="email">E-mail</label>
+          <input class="campo__field" type="email" placeholder="Tu e-mail" id="email">
+        </div>
+        <div class="campo">
+          <label class="campo__label" for="mensaje">Mensaje</label>
+          <textarea  class="campo__field campo__field--textarea" id="mensaje" placeholder="Tu mensaje"></textarea>
+        </div>
+        <div class="campo">
+          <input  type="submit" value="Enviar" class="boton boton--primario">
+
+        </div>
+         
+       </form>
+     </div>
+
+   </main>
+
+   
+   
+   
+   <footer class="footer">
+    <div class="contenedor">
+        
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                    <!--Se usa span para darle una variante al texto como 2 fuentes en un titulo -->
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlace" href="cursos.html">Cursos</a>
+                    <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+
+                </nav>
+            </div>
+    </div>
+
+   </footer>
+   <script src="js/modernizr.js"></script>
+</body>
+</html>
